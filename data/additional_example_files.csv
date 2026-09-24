@@ -1,0 +1,5 @@
+ID,Description,a,m,b,Predecessors
+D,Integration,2,2,2,B|C
+C,Branch two,1,2,3,A
+A,Start,1,1,1,-
+B,Branch one,0,2,4,A

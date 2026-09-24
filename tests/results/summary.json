@@ -1,0 +1,117 @@
+[
+  {
+    "name": "Warning-free GCC C11 builds",
+    "status": "PASS",
+    "detail": "Includes -Werror"
+  },
+  {
+    "name": "C core regression suite",
+    "status": "PASS",
+    "detail": "ALL CORE TESTS PASSED: 62547 assertions"
+  },
+  {
+    "name": "Allocation tracking and exhaustive lecture allocation failure sweep",
+    "status": "PASS",
+    "detail": "ALL CORE TESTS PASSED: 62745 assertions"
+  },
+  {
+    "name": "AddressSanitizer",
+    "status": "UNAVAILABLE",
+    "detail": "D:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find -lasan\ncollect2.exe: error: ld returned 1 exit status"
+  },
+  {
+    "name": "Classroom CLI output",
+    "status": "PASS",
+    "detail": "44 days; variance 9; sigma 3; Z 1; 84.1345%"
+  },
+  {
+    "name": "Repeated menu analysis and invalid deadline recovery",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "Keyboard field re-entry and predecessor rollback",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "Keyboard cycle recovery before deadline",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "EOF during keyboard input",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "UTF-8 BOM CRLF whitespace and empty lines",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "Wrong header",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "Embedded NUL",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "Quoted comma unsupported",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "Maximum 256-byte description",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "Description over 256 bytes",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "Long line no silent truncation",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "Maximum 32-byte ID",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "ID over 32 bytes",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "Case-sensitive IDs",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "Missing header",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "Filename line number and activity diagnostics",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "Small nonzero slack remains visible and noncritical",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "Independent randomized scheduling oracle",
+    "status": "PASS",
+    "detail": "100 shuffled DAGs; every result row and emitted path checked"
+  }
+]

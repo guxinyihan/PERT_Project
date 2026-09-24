@@ -1,0 +1,74 @@
+
+PERT Scheduling and Probability Analysis
+1. Load CSV
+2. Enter project by keyboard
+0. Exit
+Choice: Number of activities: Enter a positive integer within the platform size range.
+Number of activities: Enter activities first; predecessors are entered after all IDs exist.
+Activity 1 of 2
+ID: Invalid or duplicate ID; re-enter it.
+ID: Description: Description needs 1-256 bytes; commas and newlines are unsupported. Try again.
+Description: Optimistic a: Enter a finite nonnegative decimal number without trailing text. Try again.
+Optimistic a: Most likely m: Estimate must be at least the previous estimate. Try again.
+Most likely m: Pessimistic b: Activity 2 of 2
+ID: Invalid or duplicate ID; re-enter it.
+ID: Description: Optimistic a: Most likely m: Pessimistic b: Predecessors for A (- or ID|ID):
+> Predecessors for B (- or ID|ID):
+> Predecessor 'Unknown': Unknown predecessor ID. Try again.
+> Predecessor 'A': Duplicate dependency. Try again.
+> Target deadline (days): 
+1. Project Overview
+Activities: 2  Dependencies: 1
+Time unit: days; AON; finish-to-start, zero lag
+Project expected duration: 3 days
+
+2. Input Activity Table
+ID | Description | a | m | b | Predecessors
+A | First | 1 | 1 | 1 | -
+B | Second | 2 | 2 | 2 | A
+
+3. Activity Duration Estimation
+te = (a + 4m + b)/6; variance = ((b-a)/6)^2
+A: te=1, variance=0
+B: te=2, variance=0
+
+4. Topological Order
+A -> B
+
+5. Forward Pass
+A: ES = 0 (start) = 0; EF = 0 + 1 = 1
+B: ES = max(EF(A)=1) = 1; EF = 1 + 2 = 3
+
+6. Backward Pass
+B: LF = T=3 (terminal) = 3; LS = 3 - 2 = 1
+A: LF = min(LS(B)=1) = 1; LS = 1 - 1 = 0
+
+7. Final PERT Results
+ID | Expected | Variance | ES | EF | LS | LF | Slack | Critical
+A | 1.0000 | 0.0000 | 0.0000 | 1.0000 | 0.0000 | 1.0000 | 0.0000 | YES
+B | 2.0000 | 0.0000 | 1.0000 | 3.0000 | 1.0000 | 3.0000 | 0.0000 | YES
+
+8. Critical Activities and Paths
+Critical activities (2): A B
+Each complete path and its probability are streamed below.
+
+9. Probability Analysis
+Traditional PERT single-path normal approximation
+Path 1: A -> B
+  Mean=3 days; variance=0 days^2; sigma=0 days; Z=N/A (deterministic); P=100.0000%
+Emitted critical paths: 1
+Truncated: NO
+Deadline: 3 days (on or before)
+
+10. Warnings and Limitations
+Path variances assume independent activity durations.
+Path probabilities are traditional PERT approximations, not exact project probabilities.
+Near-critical paths can become controlling under uncertainty.
+No resource constraints, calendars or nonzero dependency lags are modeled.
+Critical comparisons use absolute 1e-9 day tolerance; internal results are unrounded.
+
+PERT Scheduling and Probability Analysis
+1. Load CSV
+2. Enter project by keyboard
+0. Exit
+Choice: Goodbye.

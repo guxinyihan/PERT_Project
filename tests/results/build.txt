@@ -1,0 +1,1 @@
+$ gcc -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 -Iinclude src/main.c src/model.c src/input.c src/graph.c src/pert.c src/probability.c src/output.c -o pert.exe -lm

@@ -1,0 +1,121 @@
+
+PERT Scheduling and Probability Analysis
+1. Load CSV
+2. Enter project by keyboard
+0. Exit
+Choice: CSV filename (no surrounding quotes): Target deadline (days): 
+1. Project Overview
+Activities: 14  Dependencies: 16
+Time unit: days; AON; finish-to-start, zero lag
+Project expected duration: 44 days
+
+2. Input Activity Table
+ID | Description | a | m | b | Predecessors
+A | Site clearing | 1 | 2 | 3 | -
+B | Foundation | 2 | 3.5 | 8 | A
+C | Block Laying | 6 | 9 | 18 | B
+D | Roofing | 4 | 5.5 | 10 | C
+E | Plumbing | 1 | 4.5 | 5 | C
+F | Electrical work | 4 | 4 | 10 | E
+G | Plastering | 5 | 6.5 | 11 | D
+H | Fixing up of doors and windows | 5 | 8 | 17 | E|G
+I | Ceiling | 3 | 7.5 | 9 | C
+J | Flooring | 3 | 9 | 9 | F|I
+K | Interior Fixtures | 4 | 4 | 4 | J
+L | Exterior fixtures | 1 | 5.5 | 7 | J
+M | Painting | 1 | 2 | 3 | H
+N | Landscaping | 5 | 5.5 | 9 | K|L
+
+3. Activity Duration Estimation
+te = (a + 4m + b)/6; variance = ((b-a)/6)^2
+A: te=2, variance=0.1111111111
+B: te=4, variance=1
+C: te=10, variance=4
+D: te=6, variance=1
+E: te=4, variance=0.4444444444
+F: te=5, variance=1
+G: te=7, variance=1
+H: te=9, variance=4
+I: te=7, variance=1
+J: te=8, variance=1
+K: te=4, variance=0
+L: te=5, variance=1
+M: te=2, variance=0.1111111111
+N: te=6, variance=0.4444444444
+
+4. Topological Order
+A -> B -> C -> D -> E -> I -> G -> F -> H -> J -> M -> K -> L -> N
+
+5. Forward Pass
+A: ES = 0 (start) = 0; EF = 0 + 2 = 2
+B: ES = max(EF(A)=2) = 2; EF = 2 + 4 = 6
+C: ES = max(EF(B)=6) = 6; EF = 6 + 10 = 16
+D: ES = max(EF(C)=16) = 16; EF = 16 + 6 = 22
+E: ES = max(EF(C)=16) = 16; EF = 16 + 4 = 20
+I: ES = max(EF(C)=16) = 16; EF = 16 + 7 = 23
+G: ES = max(EF(D)=22) = 22; EF = 22 + 7 = 29
+F: ES = max(EF(E)=20) = 20; EF = 20 + 5 = 25
+H: ES = max(EF(E)=20, EF(G)=29) = 29; EF = 29 + 9 = 38
+J: ES = max(EF(F)=25, EF(I)=23) = 25; EF = 25 + 8 = 33
+M: ES = max(EF(H)=38) = 38; EF = 38 + 2 = 40
+K: ES = max(EF(J)=33) = 33; EF = 33 + 4 = 37
+L: ES = max(EF(J)=33) = 33; EF = 33 + 5 = 38
+N: ES = max(EF(K)=37, EF(L)=38) = 38; EF = 38 + 6 = 44
+
+6. Backward Pass
+N: LF = T=44 (terminal) = 44; LS = 44 - 6 = 38
+L: LF = min(LS(N)=38) = 38; LS = 38 - 5 = 33
+K: LF = min(LS(N)=38) = 38; LS = 38 - 4 = 34
+M: LF = T=44 (terminal) = 44; LS = 44 - 2 = 42
+J: LF = min(LS(K)=34, LS(L)=33) = 33; LS = 33 - 8 = 25
+H: LF = min(LS(M)=42) = 42; LS = 42 - 9 = 33
+F: LF = min(LS(J)=25) = 25; LS = 25 - 5 = 20
+G: LF = min(LS(H)=33) = 33; LS = 33 - 7 = 26
+I: LF = min(LS(J)=25) = 25; LS = 25 - 7 = 18
+E: LF = min(LS(F)=20, LS(H)=33) = 20; LS = 20 - 4 = 16
+D: LF = min(LS(G)=26) = 26; LS = 26 - 6 = 20
+C: LF = min(LS(D)=20, LS(E)=16, LS(I)=18) = 16; LS = 16 - 10 = 6
+B: LF = min(LS(C)=6) = 6; LS = 6 - 4 = 2
+A: LF = min(LS(B)=2) = 2; LS = 2 - 2 = 2.220446049e-16
+
+7. Final PERT Results
+ID | Expected | Variance | ES | EF | LS | LF | Slack | Critical
+A | 2.0000 | 0.1111 | 0.0000 | 2.0000 | 0.0000 | 2.0000 | 2.220446049e-16 | YES
+B | 4.0000 | 1.0000 | 2.0000 | 6.0000 | 2.0000 | 6.0000 | 2.220446049e-16 | YES
+C | 10.0000 | 4.0000 | 6.0000 | 16.0000 | 6.0000 | 16.0000 | 0.0000 | YES
+D | 6.0000 | 1.0000 | 16.0000 | 22.0000 | 20.0000 | 26.0000 | 4.0000 | NO
+E | 4.0000 | 0.4444 | 16.0000 | 20.0000 | 16.0000 | 20.0000 | 0.0000 | YES
+F | 5.0000 | 1.0000 | 20.0000 | 25.0000 | 20.0000 | 25.0000 | 0.0000 | YES
+G | 7.0000 | 1.0000 | 22.0000 | 29.0000 | 26.0000 | 33.0000 | 4.0000 | NO
+H | 9.0000 | 4.0000 | 29.0000 | 38.0000 | 33.0000 | 42.0000 | 4.0000 | NO
+I | 7.0000 | 1.0000 | 16.0000 | 23.0000 | 18.0000 | 25.0000 | 2.0000 | NO
+J | 8.0000 | 1.0000 | 25.0000 | 33.0000 | 25.0000 | 33.0000 | 0.0000 | YES
+K | 4.0000 | 0.0000 | 33.0000 | 37.0000 | 34.0000 | 38.0000 | 1.0000 | NO
+L | 5.0000 | 1.0000 | 33.0000 | 38.0000 | 33.0000 | 38.0000 | 0.0000 | YES
+M | 2.0000 | 0.1111 | 38.0000 | 40.0000 | 42.0000 | 44.0000 | 4.0000 | NO
+N | 6.0000 | 0.4444 | 38.0000 | 44.0000 | 38.0000 | 44.0000 | 0.0000 | YES
+
+8. Critical Activities and Paths
+Critical activities (8): A B C E F J L N
+Each complete path and its probability are streamed below.
+
+9. Probability Analysis
+Traditional PERT single-path normal approximation
+Path 1: A -> B -> C -> E -> F -> J -> L -> N
+  Mean=44 days; variance=9 days^2; sigma=3 days; Z=1; P=84.1345%
+Emitted critical paths: 1
+Truncated: NO
+Deadline: 47 days (on or before)
+
+10. Warnings and Limitations
+Path variances assume independent activity durations.
+Path probabilities are traditional PERT approximations, not exact project probabilities.
+Near-critical paths can become controlling under uncertainty.
+No resource constraints, calendars or nonzero dependency lags are modeled.
+Critical comparisons use absolute 1e-9 day tolerance; internal results are unrounded.
+
+PERT Scheduling and Probability Analysis
+1. Load CSV
+2. Enter project by keyboard
+0. Exit
+Choice: Goodbye.

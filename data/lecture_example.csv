@@ -1,0 +1,15 @@
+ID,Description,a,m,b,Predecessors
+A,Site clearing,1,2,3,-
+B,Foundation,2,3.5,8,A
+C,Block Laying,6,9,18,B
+D,Roofing,4,5.5,10,C
+E,Plumbing,1,4.5,5,C
+F,Electrical work,4,4,10,E
+G,Plastering,5,6.5,11,D
+H,Fixing up of doors and windows,5,8,17,E|G
+I,Ceiling,3,7.5,9,C
+J,Flooring,3,9,9,F|I
+K,Interior Fixtures,4,4,4,J
+L,Exterior fixtures,1,5.5,7,J
+M,Painting,1,2,3,H
+N,Landscaping,5,5.5,9,K|L

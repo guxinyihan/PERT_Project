@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="450" height="235" preserveAspectRatio="xMinYMin meet" viewBox="0 0 450 235" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="450" height="235"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-235)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="166" width="205" height="54" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,94%,96%); fill-rule: evenodd;"/>
+			<text x="86.94" y="196.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,392) scale(1,-1)">Project</text>
+			<text x="40.24" y="184.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,368) scale(1,-1)">count, capacity, edge_count</text>
+			<rect x="245" y="166" width="205" height="54" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,94%,96%); fill-rule: evenodd;"/>
+			<text x="319.995" y="196.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,392) scale(1,-1)">PERTResult</text>
+			<text x="282.47" y="184.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,368) scale(1,-1)">count, duration, critical_count</text>
+			<rect x="0" y="70" width="205" height="67" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,94%,96%); fill-rule: evenodd;"/>
+			<text x="40.7285" y="112.5" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,225) scale(1,-1)">Activity[i]: id, description, a/m/b</text>
+			<text x="43.4825" y="100.5" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,201) scale(1,-1)">predecessors[i], successors[i]</text>
+			<text x="32.09299999999999" y="88.5" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,177) scale(1,-1)">IdEntry: borrowed ID + stable index</text>
+			<rect x="245" y="70" width="205" height="67" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,94%,96%); fill-rule: evenodd;"/>
+			<text x="291.23199999999997" y="112.5" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,225) scale(1,-1)">ActivityResult[i]: te, variance</text>
+			<text x="289.4815" y="100.5" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,201) scale(1,-1)">ES, EF, LS, LF, slack, critical</text>
+			<text x="310.483" y="88.5" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,177) scale(1,-1)">topological_order[]</text>
+			<path d="M 102,166 L 102,137 Z" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="102 137, 104.3971 141.3879, 99.60287 141.3879" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,20%,28%); fill-rule: evenodd;"/>
+			<path d="M 347,166 L 347,137 Z" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="347 137, 349.3971 141.3879, 344.6029 141.3879" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,20%,28%); fill-rule: evenodd;"/>
+			<path d="M 205,102 L 245,102 Z" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 1; stroke-dasharray: 3, 3;"/>
+			<text x="204.78" y="147" style="font-family: Times-Roman; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,294) scale(1,-1)">same index i</text>
+			<rect x="100" y="4" width="250" height="40" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,94%,96%); fill-rule: evenodd;"/>
+			<text x="137.5965" y="27.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,54) scale(1,-1)">Temporary DFS path[] -&gt; borrowed callback</text>
+			<text x="159.219" y="15.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,30) scale(1,-1)">No permanent collection of paths</text>
+		</g>
+	</g>
+</svg>

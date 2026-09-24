@@ -1,0 +1,10 @@
+$ C:\Users\admin\Documents\Codex\2026-09-18\files-mentioned-by-the-user-assignment\outputs\PERT_Project\tests\test_memory.exe
+PASS classroom: all 14 rows, path and probability
+PASS single/multiple starts/ends, disconnected, unsorted, multiple/zero-duration paths
+PASS invalid graph, estimates, CSV fields, references and numeric range
+PASS fractional, tiny variance, small slack, large scale and forward overflow
+PASS 20000-node chain, 256-path truncation and exact 100-path boundary
+PASS callback failure propagation
+PASS allocation failure sweep: 97 failing allocation positions plus success
+PASS allocation tracker: no live blocks, invalid frees or changed tail guards
+ALL CORE TESTS PASSED: 62745 assertions

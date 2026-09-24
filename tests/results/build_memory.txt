@@ -1,0 +1,1 @@
+$ gcc -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 -Iinclude -DTRACK_MEMORY -include tests/memory_redirect.h tests/test_core.c tests/memory_probe.c src/model.c src/input.c src/graph.c src/pert.c src/probability.c src/output.c -o tests/test_memory.exe -lm

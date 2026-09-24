@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="450" height="216" preserveAspectRatio="xMinYMin meet" viewBox="0 0 450 216" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="450" height="216"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-216)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="160" width="205" height="44" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,94%,96%); fill-rule: evenodd;"/>
+			<text x="63.03" y="185.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,370) scale(1,-1)">Load and validate</text>
+			<text x="46.51" y="173.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,346) scale(1,-1)">resolve IDs + check DAG</text>
+			<rect x="245" y="160" width="205" height="44" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,94%,96%); fill-rule: evenodd;"/>
+			<text x="304.705" y="185.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,370) scale(1,-1)">Calculate durations</text>
+			<text x="309.15" y="173.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,346) scale(1,-1)">and forward pass</text>
+			<rect x="245" y="85" width="205" height="44" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,94%,96%); fill-rule: evenodd;"/>
+			<text x="313.6" y="110.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,220) scale(1,-1)">Backward pass</text>
+			<text x="298.875" y="98.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,196) scale(1,-1)">slack and critical flags</text>
+			<rect x="0" y="85" width="205" height="44" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,94%,96%); fill-rule: evenodd;"/>
+			<text x="58.59" y="110.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,220) scale(1,-1)">Read valid deadline</text>
+			<text x="51.364999999999995" y="98.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,196) scale(1,-1)">render stored schedule</text>
+			<rect x="0" y="10" width="205" height="44" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,94%,96%); fill-rule: evenodd;"/>
+			<text x="73.325" y="35.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,70) scale(1,-1)">Iterative DFS</text>
+			<text x="64.705" y="23.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,46) scale(1,-1)">callback per path</text>
+			<rect x="245" y="10" width="205" height="44" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,94%,96%); fill-rule: evenodd;"/>
+			<text x="297.48" y="35.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,70) scale(1,-1)">Summary and cleanup</text>
+			<text x="314.985" y="23.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,46) scale(1,-1)">return to menu</text>
+			<path d="M 205,182 L 245,182 Z" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="245 182, 240.6121 184.3971, 240.6121 179.6029" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,20%,28%); fill-rule: evenodd;"/>
+			<path d="M 347,160 L 347,129 Z" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="347 129, 349.3971 133.3879, 344.6029 133.3879" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,20%,28%); fill-rule: evenodd;"/>
+			<path d="M 245,107 L 205,107 Z" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="205 107, 209.3879 104.6029, 209.3879 109.3971" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,20%,28%); fill-rule: evenodd;"/>
+			<path d="M 102,85 L 102,54 Z" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="102 54, 104.3971 58.38791, 99.60287 58.38791" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,20%,28%); fill-rule: evenodd;"/>
+			<path d="M 205,32 L 245,32 Z" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="245 32, 240.6121 34.39713, 240.6121 29.60287" style="stroke: rgb(9%,20%,28%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,20%,28%); fill-rule: evenodd;"/>
+			<text x="153.692" y="145" style="font-family: Times-Roman; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,290) scale(1,-1)">Any error: report, release owned data, return</text>
+		</g>
+	</g>
+</svg>
